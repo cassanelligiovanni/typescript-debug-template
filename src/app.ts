@@ -186,12 +186,6 @@ app.get('/airbyte', async (req, res) => {
 
 app.get('/salesforce', async (req, res) => {
   const leads = await getAllLeads('audiencerate-sandbox-salesforce');
-
-  leads.forEach((lead) => {
-    console.log(
-      `Lead: ${lead.Id}, ${lead.FirstName} ${lead.LastName}, Company: ${lead.Company}, Status: ${lead.Status}`,
-    );
-  });
   res.json(leads);
 });
 

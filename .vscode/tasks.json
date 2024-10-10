@@ -2,26 +2,11 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "tsc: build - tsconfig.json",
-      "type": "shell",
-      "command": "npx",
-      "args": ["tsc", "-p", ".", "--outDir", "./dist"],
-      "problemMatcher": ["$tsc"],
-      "group": {
-        "kind": "build",
-        "isDefault": true
-      }
-    },
-    {
-      "label": "tsc: watch - tsconfig.json",
       "type": "typescript",
       "tsconfig": "tsconfig.json",
-      "problemMatcher": ["$tsc-watch"],
-      "isBackground": true,
-      "group": {
-        "kind": "build",
-        "isDefault": false
-      }
+      "problemMatcher": ["$tsc"],
+      "group": "build",
+      "label": "tsc: compilazione - tsconfig.json"
     }
   ]
 }

@@ -24,7 +24,8 @@ export async function getAllLeads(userId: string): Promise<any[]> {
         connectionId: userId,
         params: nextUrl.includes('query') ? { q: query } : {},
       });
-      console.log();
+      console.log('#### PAGE n*', page);
+      console.log(response.data.records.length, ' Records');
 
       const data = response.data;
       leads.push(...data.records);
