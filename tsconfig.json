@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es6",
+    "outDir": "./dist", // Output directory for compiled JS
+    "rootDir": "./src", // Source directory
+    "strict": true,
+    "sourceMap": true, // Enable source maps
+    "esModuleInterop": true, // Allows default imports of CommonJS modules
+    "skipLibCheck": true
+  },
+  "watchOptions": {
+    "watchFile": "useFsEvents" // This will apply file watching options
+  },
+  "include": ["src/**/*.ts"], // Include all TypeScript files in src
+  "exclude": ["node_modules"]
+}
